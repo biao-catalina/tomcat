@@ -108,6 +108,10 @@
   <subsection name="Catalina">
     <changelog>
       <fix>
+        <bug>65301</bug>: <code>RemoteIpValve</code> will now avoid getting
+        the local host name when it is not needed. (remm)
+      </fix>
+      <fix>
         <bug>65308</bug>: NPE in JNDIRealm when no <code>userRoleAttribute</code>
         is given. (fschumacher)
       </fix>
@@ -149,6 +153,15 @@
         <bug>65124</bug>: Partial fix. When generating Java source code to call
         a tag handler, only define the local variable <code>JspWriter out</code>
         when it is going to be used. (markt)
+      </fix>
+    </changelog>
+  </subsection>
+  <subsection name="Web applications">
+    <changelog>
+      <fix>
+        Improve the description of the <code>maxConnections</code> and
+        <code>acceptCount</code> attributes in the Connector section of the
+        documentation web application. (markt)
       </fix>
     </changelog>
   </subsection>
